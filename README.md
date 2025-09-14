@@ -7,7 +7,8 @@ It’s a small React app that demonstrates client-side routing with React Router
 ## Installation
 1. Clone this repository to your local machine:
 ```
-https://github.com/FGiannini95/React-Router-Course-Ui.dev.git```
+https://github.com/FGiannini95/React-Router-Course-Ui.dev.git
+````
 2. Install the dependencies:
 ```
 npm i
