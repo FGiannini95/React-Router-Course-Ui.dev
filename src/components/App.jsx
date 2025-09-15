@@ -3,6 +3,7 @@ import { Home } from "./Home";
 import { Players } from "./Players";
 import { Navbar } from "./Navbar";
 import { BasketTeams } from "./BasketTeams";
+import { TeamPage } from "./TeamPage";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/players" element={<Players />} />
           <Route path="/teams" element={<BasketTeams />} />
+          <Route path="/:teamId" element={<TeamPage />} />
         </Routes>
       </div>
     </Router>
