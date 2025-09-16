@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 import useTeamNames from "../hooks/useTeamNames";
 import { Loading } from "./Loading";
 
-export const Teams = () => {
+const Teams = () => {
   const { response: teamsNames, loading } = useTeamNames();
 
   if (loading) return <Loading />;
@@ -16,3 +16,5 @@ export const Teams = () => {
     </div>
   );
 };
+
+export default Teams;

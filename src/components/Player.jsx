@@ -3,7 +3,7 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import usePlayer from "../hooks/usePlayer";
 import { Loading } from "./Loading";
 
-export const Player = () => {
+const Player = () => {
   const { playerId } = useParams();
 
   const { response: player, loading } = usePlayer(playerId);
@@ -59,3 +59,5 @@ export const Player = () => {
 
   return <div className="panel">{body}</div>;
 };
+
+export default Player;

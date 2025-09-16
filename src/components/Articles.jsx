@@ -4,7 +4,7 @@ import { Outlet, useParams } from "react-router-dom";
 import useTeamsArticles from "../hooks/useTeamsArticles";
 import { Loading } from "./Loading";
 
-export const Articles = () => {
+const Articles = () => {
   const { teamId } = useParams();
   const { response: articles, loading } = useTeamsArticles(teamId);
 
@@ -20,3 +20,5 @@ export const Articles = () => {
     </div>
   );
 };
+
+export default Articles;

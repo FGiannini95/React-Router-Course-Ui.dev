@@ -4,7 +4,7 @@ import useTeam from "../hooks/useTeam";
 import TeamLogo from "./TeamLogo";
 import { Loading } from "./Loading";
 
-export const Team = () => {
+const Team = () => {
   const { teamId } = useParams();
   const { response: team, loading } = useTeam(teamId);
 
@@ -38,3 +38,5 @@ export const Team = () => {
 
   return <div className="panel">{body}</div>;
 };
+
+export default Team;

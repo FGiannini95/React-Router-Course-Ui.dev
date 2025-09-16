@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import useTeamNames from "../hooks/useTeamNames";
 import { Loading } from "./Loading";
 
-export const Home = () => {
+const Home = () => {
   const { loading, response: teamNames } = useTeamNames();
 
   return (
@@ -25,3 +25,5 @@ export const Home = () => {
     </div>
   );
 };
+
+export default Home;

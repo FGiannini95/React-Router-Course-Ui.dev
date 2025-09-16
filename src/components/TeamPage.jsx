@@ -23,7 +23,7 @@ function useTeamPageData(teamId) {
   };
 }
 
-export const TeamPage = () => {
+const TeamPage = () => {
   const { teamId } = useParams();
   const { teamNames, articles, team, loading } = useTeamPageData(teamId);
 
@@ -84,3 +84,5 @@ export const TeamPage = () => {
     </div>
   );
 };
+
+export default TeamPage;

@@ -4,7 +4,7 @@ import usePlayerNames from "../hooks/usePlayerNames";
 import { Sidebar } from "../components/Sidebar";
 import { Loading } from "./Loading";
 
-export const Players = () => {
+const Players = () => {
   const location = useLocation();
   const [searchParams] = useSearchParams(location.search);
   const [team, setTeam] = useState(searchParams.get("teamId"));
@@ -34,3 +34,5 @@ export const Players = () => {
     </div>
   );
 };
+
+export default Players;
