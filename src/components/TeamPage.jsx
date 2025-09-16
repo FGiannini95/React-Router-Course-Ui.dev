@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useParams, useSearchParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import useTeamNames from "../hooks/useTeamNames";
 import useTeam from "../hooks/useTeam";
 import useTeamsArticles from "../hooks/useTeamsArticles";

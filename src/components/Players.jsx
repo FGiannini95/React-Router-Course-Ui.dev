@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation, useSearchParams } from "react-router-dom";
-import usePlayersNames from "../hooks/usePlayerNames";
 import usePlayerNames from "../hooks/usePlayerNames";
 import { slugify } from "../utils";
 
@@ -67,8 +66,6 @@ export const Players = () => {
   if (loading) {
     return null;
   }
-
-  console.log({ names });
 
   return (
     <div className="container">
