@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useLocation, useSearchParams } from "react-router-dom";
+import { Link, Outlet, useLocation, useSearchParams } from "react-router-dom";
 import usePlayerNames from "../hooks/usePlayerNames";
 import { slugify } from "../utils";
 
@@ -68,8 +68,9 @@ export const Players = () => {
   }
 
   return (
-    <div className="container">
+    <div className="container two-column">
       <Sidebar title="Players" list={names} />
+      <Outlet />
     </div>
   );
 };

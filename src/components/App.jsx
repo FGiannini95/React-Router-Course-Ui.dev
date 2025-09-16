@@ -4,6 +4,7 @@ import { Players } from "./Players";
 import { Navbar } from "./Navbar";
 import { BasketTeams } from "./BasketTeams";
 import { TeamPage } from "./TeamPage";
+import { Player } from "./Player";
 
 export default function App() {
   return (
@@ -12,7 +13,9 @@ export default function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/players" element={<Players />} />
+          <Route path="/players" element={<Players />}>
+            <Route path=":playerId" element={<Player />} />
+          </Route>
           <Route path="/teams" element={<BasketTeams />} />
           <Route path="/:teamId" element={<TeamPage />} />
         </Routes>
