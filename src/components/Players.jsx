@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Outlet, useLocation, useSearchParams } from "react-router-dom";
 import usePlayerNames from "../hooks/usePlayerNames";
 import { Sidebar } from "../components/Sidebar";
+import { Loading } from "./Loading";
 
 export const Players = () => {
   const location = useLocation();
@@ -24,9 +25,7 @@ export const Players = () => {
 
   const { response: names, loading } = usePlayerNames(team);
 
-  if (loading) {
-    return null;
-  }
+  if (loading) return <Loading />;
 
   return (
     <div className="container two-column">

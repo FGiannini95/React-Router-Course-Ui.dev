@@ -1,13 +1,17 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import usePlayer from "../hooks/usePlayer";
+import { Loading } from "./Loading";
 
 export const Player = () => {
   const { playerId } = useParams();
 
   const { response: player, loading } = usePlayer(playerId);
 
-  if (loading || !player) return;
+  if (loading) {
+    return <Loading />;
+  }
+  if (!player) return;
 
   return (
     <div className="panel">
