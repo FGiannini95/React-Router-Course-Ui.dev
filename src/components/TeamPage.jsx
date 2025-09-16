@@ -26,8 +26,6 @@ export const TeamPage = () => {
   const { teamId } = useParams();
   const { teamNames, articles, team, loading } = useTeamPageData(teamId);
 
-  console.log({ teamNames, articles, team });
-
   if (loading) {
     return <p>Loading</p>;
   }
