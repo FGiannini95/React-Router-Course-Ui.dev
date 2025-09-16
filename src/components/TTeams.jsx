@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Sidebar } from "./Sidebar";
 import { Outlet } from "react-router-dom";
 import useTeamNames from "../hooks/useTeamNames";
 
-export const BasketTeams = () => {
+export const Teams = () => {
   const { response: teamsNames, loading } = useTeamNames();
 
   if (loading) return;

@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home } from "./Home";
 import { Players } from "./Players";
 import { Navbar } from "./Navbar";
-import { BasketTeams } from "./BasketTeams";
+import { Teams } from "./TTeams";
 import { TeamPage } from "./TeamPage";
 import { Player } from "./Player";
 import { Team } from "./Team";
@@ -17,7 +17,7 @@ export default function App() {
           <Route path="/players" element={<Players />}>
             <Route path=":playerId" element={<Player />} />
           </Route>
-          <Route path="/teams" element={<BasketTeams />}>
+          <Route path="/teams" element={<Teams />}>
             <Route path=":teamId" element={<Team />} />
           </Route>
           <Route path="/:teamId" element={<TeamPage />} />
