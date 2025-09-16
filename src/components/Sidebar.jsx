@@ -4,9 +4,9 @@ import { slugify } from "../utils";
 
 function CustomLink({ to, children }) {
   const location = useLocation();
-  // /players/alex-anderson => alex-anderson
-  const playerId = location.pathname.split("/")[2];
-  const match = playerId === to;
+  // grab the last item of the url
+  const split = location.pathname.split("/");
+  const match = split[split.length - 1] === to;
 
   const styles =
     match === true ? { fontWeight: 900, color: "var(--white)" } : {};
