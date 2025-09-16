@@ -35,6 +35,12 @@ export default function App() {
           <Route path="/:teamId" element={<TeamPage />} />
           <Route path="/:teamId/articles" element={<Articles />}>
             <Route path=":articleId" element={<Article />} />
+            <Route
+              path=""
+              element={
+                <div className="sidebar-instruction">Select an article</div>
+              }
+            />
           </Route>
         </Routes>
       </div>
